@@ -118,7 +118,7 @@ public class seleniumloccls {
 
 	@And("^close the google$")
 	public void close_the_google() throws Throwable {
-		//driver.close();
+		driver.close();
 	}
 	
 	public void screenshot(String imagetitle) throws IOException
@@ -167,7 +167,14 @@ public class seleniumloccls {
 		Thread.sleep(5000);
 		screenshot("mousehover.jpg");
 	}
-	}
+	@Given("^open google chrome browser$")
+    public void open_google_chrome_browser() throws Throwable {
+	ChromeOptions co=new ChromeOptions();
+	driver=new ChromeDriver();
+	driver.get("https://www.google.com");
+}
+   
+}
 		
 
 
