@@ -173,6 +173,16 @@ public class seleniumloccls {
 	driver=new ChromeDriver();
 	driver.get("https://www.google.com");
 }
+	@Given("^Launch Flipkart website$")
+	public void launch_Flipkart_website() throws Throwable {
+		ChromeOptions co=new ChromeOptions();
+		driver=new ChromeDriver();
+		driver.get("https://www.google.com");
+		WebElement a=driver.findElement(By.id("APjFqb"));
+		a.sendKeys("flipkart");
+		a.submit();
+		driver.findElement(By.linkText("Clothing and Accessories")).click();
+	    }
    
 }
 		
